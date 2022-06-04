@@ -131,10 +131,7 @@
     <div style="height:195px;overflow:auto;">
         {{ range $page.news }}
           <li> 
-            <div class="description">
-              <p class="course">{{ with .date }}, {{ . }}{{ end }}{{ .new | markdownify | emojify }} </p>
-              <p class="institution">{{ .loc }}</p>
-            </div>
+            {{ $.new | markdownify | emojify }}
           </li>
         {{ end }}
     </div>

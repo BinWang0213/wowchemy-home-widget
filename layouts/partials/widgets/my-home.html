@@ -55,6 +55,9 @@
         {{ end }}
       </div>
 
+      {{ with $person.email }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+
+
       <ul class="network-icon" aria-hidden="true">
         {{ range $person.social }}
         {{ $pack := or .icon_pack "fas" }}

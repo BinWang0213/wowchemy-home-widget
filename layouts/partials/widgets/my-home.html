@@ -53,9 +53,10 @@
           {{ if .url }}</a>{{ end }}
         </h3>
         {{ end }}
+
+        {{ with $person.email }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
       </div>
 
-      {{ with $person.email }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
 
 
       <ul class="network-icon" aria-hidden="true">
